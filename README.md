@@ -48,15 +48,15 @@ CuttingDownIncidents/
  
 
 2. **Frontend Components**
-```bash
-cd FrontendWETask
-npm install
-ng serve --open
-# Opens http://localhost:4200
+   ```bash
+   cd FrontendWETask
+   npm install
+   ng serve --open
+   # Opens http://localhost:4200
 
 
 3. **Console Utilities**
-```bash
-cd ConsoleAppWETask
-dotnet restore
-dotnet run
+   ```bash
+   cd ConsoleAppWETask
+   dotnet restore
+   dotnet run
