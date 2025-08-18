@@ -1,0 +1,470 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Study\\WETask\\ConsoleAppWETask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\facttables\\cutting_down_fact\\cuttingdownheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\facttables\\cutting_down_fact\\cuttingdownheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\facttables\\network\\networkelementhierarchypath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\facttables\\network\\networkelementhierarchypath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\facttables\\network\\networkelementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\facttables\\network\\networkelementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\cutting_down_staging\\cuttingdownb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\cutting_down_staging\\cuttingdownb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\cutting_down_staging\\cuttingdowna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\cutting_down_staging\\cuttingdowna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\facttables\\network\\network_element.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\facttables\\network\\network_element.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\problemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\problemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\governrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\governrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\facttables\\cutting_down_fact\\cuttingdowndetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\facttables\\cutting_down_fact\\cuttingdowndetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\consoleappwetask.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\consoleappwetask.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\zone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\zone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\sector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\sector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\flat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\flat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\cable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\cable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\cabin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\cabin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\staging tables\\hierarchy\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\staging tables\\hierarchy\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\facttables\\channel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\facttables\\channel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\entities\\facttables\\cutting_down_fact\\cuttingdownignored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\entities\\facttables\\cutting_down_fact\\cuttingdownignored.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|d:\\study\\wetask\\consoleappwetask\\consoleappwetask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{70D17EB3-63B8-43BE-ACAB-CC3C08D21C0A}|ConsoleAppWETask\\ConsoleAppWETask.csproj|solutionrelative:consoleappwetask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 261,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CuttingDownB.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\Cutting_Down_Staging\\CuttingDownB.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\Cutting_Down_Staging\\CuttingDownB.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\Cutting_Down_Staging\\CuttingDownB.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\Cutting_Down_Staging\\CuttingDownB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:17:35.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NetworkElementHierarchyPath.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Network\\NetworkElementHierarchyPath.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\FactTables\\Network\\NetworkElementHierarchyPath.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Network\\NetworkElementHierarchyPath.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\FactTables\\Network\\NetworkElementHierarchyPath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:17:00.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NetworkElementType.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Network\\NetworkElementType.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\FactTables\\Network\\NetworkElementType.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Network\\NetworkElementType.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\FactTables\\Network\\NetworkElementType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:17:08.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CuttingDownHeader.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownHeader.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownHeader.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownHeader.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownHeader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:16:35.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CuttingDownA.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\Cutting_Down_Staging\\CuttingDownA.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\Cutting_Down_Staging\\CuttingDownA.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\Cutting_Down_Staging\\CuttingDownA.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\Cutting_Down_Staging\\CuttingDownA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:17:28.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Network_Element.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Network\\Network_Element.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\FactTables\\Network\\Network_Element.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Network\\Network_Element.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\FactTables\\Network\\Network_Element.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:16:52.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProblemType.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\ProblemType.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\ProblemType.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\ProblemType.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\ProblemType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:19:01.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Governrate.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Governrate.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Governrate.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Governrate.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Governrate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:22.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Program.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Program.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T04:37:41.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CuttingDownDetail.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownDetail.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownDetail.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownDetail.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:15:48.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ConsoleAppWETask",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\ConsoleAppWETask.csproj",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\ConsoleAppWETask.csproj",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\ConsoleAppWETask.csproj",
+              "RelativeToolTip": "ConsoleAppWETask\\ConsoleAppWETask.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-17T10:03:28.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:14:48.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Zone.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Zone.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Zone.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Zone.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Zone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:48.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Tower.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Tower.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Tower.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Tower.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Tower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:44.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Subscription.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Subscription.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Subscription.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Subscription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:38.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Station.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Station.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Station.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Station.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Station.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:34.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Sector.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Sector.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Sector.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Sector.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Sector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:28.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Flat.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Flat.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Flat.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Flat.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Flat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:17.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "City.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\City.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\City.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\City.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\City.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:11.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Cable.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Cable.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Cable.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Cable.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Cable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:06.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Cabin.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Cabin.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Cabin.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Cabin.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Cabin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:18:00.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Building.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Building.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Building.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Building.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Building.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:17:50.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Block.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Block.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Block.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Block.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\Staging Tables\\hierarchy\\Block.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:17:44.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Channel.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Channel.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\FactTables\\Channel.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Channel.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\FactTables\\Channel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:17:15.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CuttingDownIgnored.cs",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownIgnored.cs",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownIgnored.cs",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownIgnored.cs",
+              "RelativeToolTip": "ConsoleAppWETask\\Entities\\FactTables\\Cutting_Down_Fact\\CuttingDownIgnored.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T10:16:42.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\appsettings.json",
+              "RelativeDocumentMoniker": "ConsoleAppWETask\\appsettings.json",
+              "ToolTip": "D:\\Study\\WETask\\ConsoleAppWETask\\ConsoleAppWETask\\appsettings.json",
+              "RelativeToolTip": "ConsoleAppWETask\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-17T09:32:07.296Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

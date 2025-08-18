@@ -1,0 +1,6 @@
+@CuttingDownIncidents.APIs_HostAddress = http://localhost:5041
+
+GET {{CuttingDownIncidents.APIs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
