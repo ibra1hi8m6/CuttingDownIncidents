@@ -11,16 +11,19 @@ A comprehensive incident management system featuring:
 - **Web Interface**: Modern Angular 19 application
 - **Admin Tools**: .NET 9 console utilities
 
-## 📂 Project Structure
-
-      ```mermaid
-         graph TD
-          A[Root Directory] --> B[CuttingDownIncidents/]
-          A --> C[FrontendWETask/]
-          A --> D[ConsoleAppWETask/]
-          B -->|ASP.NET Core 9| E[Backend API]
-          C -->|Angular 19| F[Web Interface]
-          D -->|.NET 9| G[Console Utilities]
+## 🏗 Project Structure
+📦 CuttingDownIncidents
+├── 📂 CuttingDownIncidents       # Backend API (ASP.NET Core 9)
+│   ├── 📂 Controllers
+│   ├── 📂 Models
+│   └── 📂 Services
+├── 📂 FrontendWETask             # Frontend (Angular 19)
+│   ├── 📂 src
+│   │   ├── 📂 app
+│   │   └── 📂 assets
+└── 📂 ConsoleAppWETask           # Console Utilities (.NET 9)
+    ├── 📂 Commands
+    └── 📂 Services
 
 ## 🛠 Technology Stack
 
