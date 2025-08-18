@@ -1,7 +1,45 @@
-Cutting Down IncidentsThis project is a full-stack application designed to manage and track incidents. It is composed of three main components: a backend API, a frontend web application, and a console application.Project ComponentsThis repository is structured to house three distinct projects in a single location:CuttingDownIncidents: This folder contains the ASP.NET Core 9 backend API. It handles all data logic and serves as the central hub for the application.FrontendWETask: This folder holds the Angular 19 frontend application. It provides the user interface for interacting with the backend API.ConsoleAppWETask: This folder contains a .NET 9 console application, likely used for administrative tasks, data processing, or command-line operations.PrerequisitesBefore you can run this project, make sure you have the following software installed on your machine:.NET 9 SDKNode.js (which includes npm)Angular CLI: Install by running npm install -g @angular/cliVisual Studio or Visual Studio CodeGetting StartedFollow these steps to set up and run each part of the application.Backend (ASP.NET Core 9)Navigate to the backend project directory:cd CuttingDownIncidents
-Run the application. This will start the API server, typically on https://localhost:5001.dotnet run
-Frontend (Angular 19)Navigate to the frontend project directory:cd FrontendWETask
-Install the necessary dependencies:npm install
-Run the development server. This will launch the web application, usually on http://localhost:4200.ng serve --open
-Console App (.NET 9)Navigate to the console app directory:cd ConsoleAppWETask
-Run the application.dotnet run
+# Cutting Down Incidents
+
+## Project Overview  
+This is a comprehensive **full-stack application** designed to track, manage, and report on incidents.  
+It is composed of three interconnected projects:  
+
+- **Backend API** → Data management, business logic, and secure communication.  
+- **Frontend Application** → A modern UI for managing incidents.  
+- **Console Application** → Administrative and maintenance command-line tasks.  
+
+---
+
+## Features  
+
+- **Backend API**  
+  - Built with **ASP.NET Core 9**  
+  - Handles data persistence, authentication, and incident workflows  
+
+- **Frontend Application**  
+  - Developed with **Angular 19**  
+  - Dynamic and responsive UI for managing incidents  
+
+- **Console Application**  
+  - Developed with **.NET 9**  
+  - Useful for administrative operations like import/export  
+
+---
+
+## Technologies Used  
+
+- **ASP.NET Core 9** → Backend API  
+- **Angular 19** → Frontend  
+- **.NET 9** → Console application  
+- **SQL Server** → Primary database  
+
+---
+
+## Installation and Setup  
+
+### Prerequisites  
+- [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later  
+- [Node.js (with npm)](https://nodejs.org/)  
+- [Angular CLI](https://angular.dev/tools/cli) → Install globally:  
+  ```bash
+  npm install -g @angular/cli
