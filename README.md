@@ -1,45 +1,62 @@
 # Cutting Down Incidents
 
-## Project Overview  
-This is a comprehensive **full-stack application** designed to track, manage, and report on incidents.  
-It is composed of three interconnected projects:  
+![.NET Version](https://img.shields.io/badge/.NET-9-512BD4?logo=dotnet)
+![Angular Version](https://img.shields.io/badge/Angular-19-DD0031?logo=angular)
+![SQL Server](https://img.shields.io/badge/Database-SQL_Server-CC2927?logo=microsoft-sql-server)
 
-- **Backend API** → Data management, business logic, and secure communication.  
-- **Frontend Application** → A modern UI for managing incidents.  
-- **Console Application** → Administrative and maintenance command-line tasks.  
+## 📝 Project Description
 
----
+A comprehensive incident management system featuring:
+- **Backend API**: Robust .NET 9 service layer
+- **Web Interface**: Modern Angular 19 application
+- **Admin Tools**: .NET 9 console utilities
 
-## Features  
+## 🏗 Project Structure
+CuttingDownIncidents/
+├── CuttingDownIncidents/ # Backend API (ASP.NET Core 9)
+├── FrontendWETask/ # Frontend (Angular 19)
+└── ConsoleAppWETask/ # Console utilities (.NET 9)
 
-- **Backend API**  
-  - Built with **ASP.NET Core 9**  
-  - Handles data persistence, authentication, and incident workflows  
+## 🛠 Technology Stack
 
-- **Frontend Application**  
-  - Developed with **Angular 19**  
-  - Dynamic and responsive UI for managing incidents  
+| Component       | Technology          |
+|-----------------|---------------------|
+| **Backend**     | ASP.NET Core 9      |
+| **Frontend**    | Angular 19          |
+| **CLI Tools**   | .NET 9 Console      |
+| **Database**    | SQL Server          |
 
-- **Console Application**  
-  - Developed with **.NET 9**  
-  - Useful for administrative operations like import/export  
+## 🚀 Getting Started
 
----
+### Prerequisites
 
-## Technologies Used  
+- [.NET 9 SDK](https://dotnet.microsoft.com/download)
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- Angular CLI (`npm install -g @angular/cli`)
+- IDE (VS Code or Visual Studio)
 
-- **ASP.NET Core 9** → Backend API  
-- **Angular 19** → Frontend  
-- **.NET 9** → Console application  
-- **SQL Server** → Primary database  
+### Installation & Running
 
----
+1. **Backend API**
+   ```bash
+   cd CuttingDownIncidents
+   dotnet restore
+   dotnet run
+   # API available at https://localhost:5001
 
-## Installation and Setup  
 
-### Prerequisites  
-- [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later  
-- [Node.js (with npm)](https://nodejs.org/)  
-- [Angular CLI](https://angular.dev/tools/cli) → Install globally:  
-  ```bash
-  npm install -g @angular/cli
+ 
+
+2. **Frontend Components**
+```bash
+cd FrontendWETask
+npm install
+ng serve --open
+# Opens http://localhost:4200
+
+
+3. **Console Utilities**
+```bash
+cd ConsoleAppWETask
+dotnet restore
+dotnet run
