@@ -1,0 +1,3 @@
+[submodule "FrontendWETask"]
+	path = FrontendWETask
+	url = https://github.com/username/FrontendWETask.git
