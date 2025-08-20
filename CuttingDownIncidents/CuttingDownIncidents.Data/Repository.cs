@@ -33,7 +33,10 @@ namespace CuttingDownIncidents.Data
         {
             return await _dbSet.FindAsync(id);
         }
-
+        public async Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> filter)
+        {
+            return await _dbSet.FirstOrDefaultAsync(filter);
+        }
         public async Task AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);

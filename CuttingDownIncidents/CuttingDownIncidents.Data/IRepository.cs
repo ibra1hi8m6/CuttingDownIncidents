@@ -12,6 +12,7 @@ namespace CuttingDownIncidents.Data
         Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter);
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
+        Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> filter);
         Task AddAsync(T entity);
         void Update(T entity);
         void Delete(T entity);

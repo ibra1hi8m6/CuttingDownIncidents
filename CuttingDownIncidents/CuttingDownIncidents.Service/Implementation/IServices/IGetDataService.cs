@@ -7,9 +7,13 @@ namespace CuttingDownIncidents.Service.Implementation.IServices
     {
 
 
-        // ProblemType methods
+        //  methods
         Task<IEnumerable<ProblemTypesDTO>> GetAllproblemTypesAsync();
+        Task<IEnumerable<CuttingDownIgnoredDto>> GetAllCuttingDownIgnoredAsync();
+        Task<IEnumerable<NetworkElementHierarchyPathDTO>> GetAllNetworkElementHierarchyPathAsync();
 
+        Task<IEnumerable<ChannelDTO>> GetAllChannelsAsync();
+        Task<IEnumerable<NetworkElementTypeDTO>> GetAllNetworkElementTypesAsync();
         // Hierarchy methods
         Task<IEnumerable<Governrate>> GetAllGovernratesAsync();
         Task<IEnumerable<Sector>> GetSectorsByGovernrateKeyAsync(int governrateKey);

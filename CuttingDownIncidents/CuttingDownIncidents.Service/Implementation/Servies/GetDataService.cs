@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using CuttingDownIncidents.Data;
 using CuttingDownIncidents.Domain.Entities;
+using CuttingDownIncidents.Domain.Entities.FactTables;
+using CuttingDownIncidents.Domain.Entities.FactTables.Cutting_Down_Fact;
+using CuttingDownIncidents.Domain.Entities.FactTables.Network;
 using CuttingDownIncidents.Domain.Entities.Staging_Tables.hierarchy;
 using CuttingDownIncidents.Infrastructure.ViewModel;
 using CuttingDownIncidents.Service.Implementation.IServices;
@@ -23,7 +26,10 @@ namespace CuttingDownIncidents.Service.Implementation.Servies
         private readonly IRepository<Tower> _towerRepository;
         private readonly IRepository<Cabin> _cabinRepository;
         private readonly IRepository<Cable> _cableRepository;
-
+        private readonly IRepository<CuttingDownIgnored> _cuttingDownIgnored;
+        private readonly IRepository<NetworkElementHierarchyPath> _networkElementHierarchyPath;
+        private readonly IRepository<Channel> _channelRepository;
+        private readonly IRepository<NetworkElementType> _networkElementTypeRepository;
 
         public GetDataService(
             
@@ -36,7 +42,11 @@ namespace CuttingDownIncidents.Service.Implementation.Servies
         IRepository<Station> stationRepository,
         IRepository<Tower> towerRepository,
         IRepository<Cabin> cabinRepository,
-        IRepository<Cable> cableRepository
+        IRepository<Cable> cableRepository,
+        IRepository<CuttingDownIgnored> cuttingDownIgnored,
+        IRepository<NetworkElementHierarchyPath> networkElementHierarchyPath,
+           IRepository<Channel> channelRepository,
+        IRepository<NetworkElementType> networkElementTypeRepository
             )
         {
             _problemTypeRepository = problemTypeRepository;
@@ -49,6 +59,10 @@ namespace CuttingDownIncidents.Service.Implementation.Servies
             _towerRepository = towerRepository;
             _cabinRepository = cabinRepository;
             _cableRepository = cableRepository;
+            _cuttingDownIgnored = cuttingDownIgnored;
+            _networkElementHierarchyPath = networkElementHierarchyPath;
+            _channelRepository = channelRepository;
+            _networkElementTypeRepository = networkElementTypeRepository;
         }
 
 
@@ -57,6 +71,41 @@ namespace CuttingDownIncidents.Service.Implementation.Servies
             var CategoryMeals = await _problemTypeRepository.GetAllAsync();
             return _mapper.Map<IEnumerable<ProblemTypesDTO>>(CategoryMeals);
         }
+        public async Task<IEnumerable<CuttingDownIgnoredDto>> GetAllCuttingDownIgnoredAsync()
+        {
+            var entities = await _cuttingDownIgnored.GetAllAsync();
+            return _mapper.Map<IEnumerable<CuttingDownIgnoredDto>>(entities);
+        }
+        public async Task<IEnumerable<NetworkElementHierarchyPathDTO>> GetAllNetworkElementHierarchyPathAsync()
+        {
+            var entities = await _networkElementHierarchyPath.GetAllAsync();
+            return _mapper.Map<IEnumerable<NetworkElementHierarchyPathDTO>>(entities);
+        }
+
+
+        public async Task<IEnumerable<ChannelDTO>> GetAllChannelsAsync()
+        {
+            var entities = await _channelRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<ChannelDTO>>(entities);
+        }
+
+        public async Task<IEnumerable<NetworkElementTypeDTO>> GetAllNetworkElementTypesAsync()
+        {
+            var entities = await _networkElementTypeRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<NetworkElementTypeDTO>>(entities);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
         public async Task<IEnumerable<Governrate>> GetAllGovernratesAsync()
         {

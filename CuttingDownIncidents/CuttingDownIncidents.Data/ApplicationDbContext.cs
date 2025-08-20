@@ -18,6 +18,7 @@ namespace CuttingDownIncidents.Data
 {
     public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
+        public DbSet<User> Users { get; set; }
         public DbSet<CuttingDownDetail> Cutting_Down_Detail { get; set; }
         public DbSet<CuttingDownHeader> Cutting_Down_Header { get; set; }
         public DbSet<CuttingDownIgnored> Cutting_Down_Ignored { get; set; }

@@ -21,11 +21,38 @@ namespace CuttingDownIncidents.APIs.Controllers
         }
 
         [HttpGet("GetProblemTypes")]
-        public async Task<ActionResult<IEnumerable<ProblemTypesDTO>>> GetAllMeals()
+        public async Task<ActionResult<IEnumerable<ProblemTypesDTO>>> GetAllProblemTypes()
         {
             var result = await _getDataService.GetAllproblemTypesAsync();
             return Ok(result);
         }
+        [HttpGet("CuttingDownIgnored")]
+        public async Task<IActionResult> GetAllCuttingDownIgnoredAsync()
+        {
+            var data = await _getDataService.GetAllCuttingDownIgnoredAsync();
+            return Ok(data);
+        }
+        [HttpGet("NetworkElementHierarchyPath")]
+        public async Task<IActionResult> GetAllNetworkElementHierarchyPathAsync() 
+        {
+            var data = await _getDataService.GetAllNetworkElementHierarchyPathAsync();
+            return Ok(data);
+        }
+
+
+        [HttpGet("Channels")]
+        public async Task<ActionResult<IEnumerable<ChannelDTO>>> GetAllChannels()
+        {
+            var result = await _getDataService.GetAllChannelsAsync();
+            return Ok(result);
+        }
+        [HttpGet("NetworkElementTypes")]
+        public async Task<ActionResult<IEnumerable<NetworkElementTypeDTO>>> GetAllNetworkElementTypes()
+        {
+            var result = await _getDataService.GetAllNetworkElementTypesAsync();
+            return Ok(result);
+        }
+
 
     }
 }
