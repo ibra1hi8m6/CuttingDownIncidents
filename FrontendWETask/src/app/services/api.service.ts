@@ -21,5 +21,8 @@ private baseUrl = `${environment.apiurl}/incidents`;
   getNetworkElementTypes(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/NetworkElementTypes`);
   }
-  
+  getNetworkHierarchyPaths(): Observable<any[]> {
+  return this.http.get<any[]>(`${this.baseUrl}/NetworkElementHierarchyPath`);
+}
+
 }

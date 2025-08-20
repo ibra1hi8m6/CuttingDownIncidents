@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HierarchyService } from '../../services/hierarchy.service';
+import { ApiService } from '../../services/api.service';
 
 
 
@@ -22,7 +23,9 @@ export class AddComponent implements OnInit  {
   towers: any[] = [];
   cabins: any[] = [];
   cables: any[] = [];
-
+  problemTypes: any[] = [];
+  networkHierarchyPaths: any[] = [];
+  networkElementTypes: any[] = [];
   selectedGovernrate?: number;
   selectedSector?: number;
   selectedZone?: number;
@@ -30,13 +33,32 @@ export class AddComponent implements OnInit  {
   selectedStation?: number;
   selectedTower?: number;
   selectedCabin?: number;
-
-  constructor(private hierarchyService: HierarchyService) {}
+  selectedHierarchyPath?: string;
+  constructor(private hierarchyService: HierarchyService,
+              private apiService: ApiService) {}
 
   ngOnInit(): void {
     this.loadGovernrates();
+    this.loadHierarchyPaths();
+    this.loadProblemTypes();
+    this.loadNetworkElementTypes();
   }
-
+    loadProblemTypes() {
+    this.apiService.getProblemTypes().subscribe({
+      next: (data) => (this.problemTypes = data),
+      error: (err) => console.error('Error loading problem types', err),
+    });
+  }
+   loadNetworkElementTypes() {
+    this.apiService.getNetworkElementTypes().subscribe({
+      next: (data) => (this.networkElementTypes = data),
+      error: (err) => console.error('Error loading network element types', err),
+    });
+  }
+  loadHierarchyPaths() {
+    this.apiService.getNetworkHierarchyPaths()
+      .subscribe(data => this.networkHierarchyPaths = data);
+  }
   loadGovernrates() {
     this.hierarchyService.getGovernrates().subscribe(data => this.governrates = data);
   }

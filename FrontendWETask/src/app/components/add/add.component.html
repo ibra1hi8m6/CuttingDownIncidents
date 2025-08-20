@@ -1,55 +1,48 @@
-
-
 <div class="container">
-
-
-
-
   <div class="card">
-
-
     <div class="row">
       <div class="form-group">
         <label>Network Hierarchy</label>
-        <select>
-          <option>Please Select</option>
-          <option>Governrate → Individual Subscription</option>
-          <option>Governrate → Corporate Subscription</option>
+        <select [(ngModel)]="selectedHierarchyPath" class="form-select">
+          <option value="">Please Select</option>
+          <option *ngFor="let nh of networkHierarchyPaths" [value]="nh.id">
+            {{ nh.network_Element_Hierarchy_Path_Name }}
+          </option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Problem Type</label>
-        <select>
-          <option>Please Select</option>
-          <option>High</option>
-          <option>Medium</option>
-          <option>Low</option>
-        </select>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="form-group">
-        <label>Start Date</label>
-        <input type="date" />
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="form-group">
-        <label>Search Criteria</label>
-        <select>
-          <option>Please Select</option>
-          <option>City</option>
-          <option>Zone</option>
-          <option>Sector</option>
-          <option>All</option>
+        <label class="form-label">Problem type </label>
+        <select class="form-select">
+          <option value="">Please Select</option>
+          <option *ngFor="let pt of problemTypes" [value]="pt.problem_Type_Key">
+            {{ pt.problem_Type_Name }}
+          </option>
         </select>
       </div>
 
+      <div class="row">
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type="date" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label class="form-label">Search Criteria</label>
+          <select class="form-select">
+            <option value="">Please Select</option>
+            <option
+              *ngFor="let ne of networkElementTypes"
+              [value]="ne.network_Element_Type_Key"
+            >
+              {{ ne.network_Element_Type_Name }}
+            </option>
+          </select>
+            
+        </div>
+      </div>
       <div class="form-group">
         <label>Search Value</label>
         <input type="text" placeholder="Search Value" />
@@ -60,96 +53,123 @@
       </div>
     </div>
 
-
     <div class="row">
+      <div class="network-tree">
+        <ul>
+          <li *ngFor="let governrate of governrates">
+            <input
+              type="radio"
+              name="governrate"
+              [value]="governrate.governrate_Key"
+              (change)="selectGovernrate(governrate.governrate_Key)"
+              [checked]="selectedGovernrate === governrate.governrate_Key"
+            />
+            {{ governrate.governrate_Name }}
 
+            <!-- Sectors -->
+            <ul *ngIf="selectedGovernrate === governrate.governrate_Key">
+              <li *ngFor="let sector of sectors">
+                <input
+                  type="radio"
+                  name="sector"
+                  [value]="sector.sector_Key"
+                  (change)="selectSector(sector.sector_Key)"
+                  [checked]="selectedSector === sector.sector_Key"
+                />
+                {{ sector.sector_Name }}
 
-<ul>
-  <li *ngFor="let governrate of governrates">
-    <input type="radio" name="governrate" [value]="governrate.governrate_Key"
-           (change)="selectGovernrate(governrate.governrate_Key)"
-           [checked]="selectedGovernrate === governrate.governrate_Key" />
-    {{ governrate.governrate_Name }}
+                <!-- Zones -->
+                <ul *ngIf="selectedSector === sector.sector_Key">
+                  <li *ngFor="let zone of zones">
+                    <input
+                      type="radio"
+                      name="zone"
+                      [value]="zone.zone_Key"
+                      (change)="selectZone(zone.zone_Key)"
+                      [checked]="selectedZone === zone.zone_Key"
+                    />
+                    {{ zone.zone_Name }}
 
-    <!-- Sectors -->
-    <ul *ngIf="selectedGovernrate === governrate.governrate_Key">
-      <li *ngFor="let sector of sectors">
-        <input type="radio" name="sector" [value]="sector.sector_Key"
-               (change)="selectSector(sector.sector_Key)"
-               [checked]="selectedSector === sector.sector_Key" />
-        {{ sector.sector_Name }}
+                    <!-- Cities -->
+                    <ul *ngIf="selectedZone === zone.zone_Key">
+                      <li *ngFor="let city of cities">
+                        <input
+                          type="radio"
+                          name="city"
+                          [value]="city.city_Key"
+                          (change)="selectCity(city.city_Key)"
+                          [checked]="selectedCity === city.city_Key"
+                        />
+                        {{ city.city_Name }}
 
-        <!-- Zones -->
-        <ul *ngIf="selectedSector === sector.sector_Key">
-          <li *ngFor="let zone of zones">
-            <input type="radio" name="zone" [value]="zone.zone_Key"
-                   (change)="selectZone(zone.zone_Key)"
-                   [checked]="selectedZone === zone.zone_Key" />
-            {{ zone.zone_Name }}
+                        <!-- Stations -->
+                        <ul *ngIf="selectedCity === city.city_Key">
+                          <li *ngFor="let station of stations">
+                            <input
+                              type="radio"
+                              name="station"
+                              [value]="station.station_Key"
+                              (change)="selectStation(station.station_Key)"
+                              [checked]="
+                                selectedStation === station.station_Key
+                              "
+                            />
+                            {{ station.station_Name }}
 
-            <!-- Cities -->
-            <ul *ngIf="selectedZone === zone.zone_Key">
-              <li *ngFor="let city of cities">
-                <input type="radio" name="city" [value]="city.city_Key"
-                       (change)="selectCity(city.city_Key)"
-                       [checked]="selectedCity === city.city_Key" />
-                {{ city.city_Name }}
+                            <!-- Towers -->
+                            <ul *ngIf="selectedStation === station.station_Key">
+                              <li *ngFor="let tower of towers">
+                                <input
+                                  type="radio"
+                                  name="tower"
+                                  [value]="tower.tower_Key"
+                                  (change)="selectTower(tower.tower_Key)"
+                                  [checked]="selectedTower === tower.tower_Key"
+                                />
+                                {{ tower.tower_Name }}
 
-                <!-- Stations -->
-                <ul *ngIf="selectedCity === city.city_Key">
-                  <li *ngFor="let station of stations">
-                    <input type="radio" name="station" [value]="station.station_Key"
-                           (change)="selectStation(station.station_Key)"
-                           [checked]="selectedStation === station.station_Key" />
-                    {{ station.station_Name }}
+                                <!-- Cabins -->
+                                <ul *ngIf="selectedTower === tower.tower_Key">
+                                  <li *ngFor="let cabin of cabins">
+                                    <input
+                                      type="radio"
+                                      name="cabin"
+                                      [value]="cabin.cabin_Key"
+                                      (change)="selectCabin(cabin.cabin_Key)"
+                                      [checked]="
+                                        selectedCabin === cabin.cabin_Key
+                                      "
+                                    />
+                                    {{ cabin.cabin_Name }}
 
-                    <!-- Towers -->
-                    <ul *ngIf="selectedStation === station.station_Key">
-                      <li *ngFor="let tower of towers">
-                        <input type="radio" name="tower" [value]="tower.tower_Key"
-                               (change)="selectTower(tower.tower_Key)"
-                               [checked]="selectedTower === tower.tower_Key" />
-                        {{ tower.tower_Name }}
-
-                        <!-- Cabins -->
-                        <ul *ngIf="selectedTower === tower.tower_Key">
-                          <li *ngFor="let cabin of cabins">
-                            <input type="radio" name="cabin" [value]="cabin.cabin_Key"
-                                   (change)="selectCabin(cabin.cabin_Key)"
-                                   [checked]="selectedCabin === cabin.cabin_Key" />
-                            {{ cabin.cabin_Name }}
-
-                            <!-- Cables -->
-                            <ul *ngIf="selectedCabin === cabin.cabin_Key">
-                              <li *ngFor="let cable of cables">
-                                <input type="radio" name="cable" [value]="cable.cable_Key" />
-                                {{ cable.cable_Name }}
+                                    <!-- Cables -->
+                                    <ul
+                                      *ngIf="selectedCabin === cabin.cabin_Key"
+                                    >
+                                      <li *ngFor="let cable of cables">
+                                        <input
+                                          type="radio"
+                                          name="cable"
+                                          [value]="cable.cable_Key"
+                                        />
+                                        {{ cable.cable_Name }}
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
                               </li>
                             </ul>
-
                           </li>
                         </ul>
-
                       </li>
                     </ul>
-
                   </li>
                 </ul>
-
               </li>
             </ul>
-
           </li>
         </ul>
-
-      </li>
-    </ul>
-
-  </li>
-</ul>
-
-
-
+      </div>
 
       <div class="table-container">
         <table>
@@ -185,11 +205,9 @@
       </div>
     </div>
 
-
     <div class="row actions">
       <button class="add-btn">Add</button>
       <button class="reset-btn">Reset</button>
     </div>
-
   </div>
 </div>
