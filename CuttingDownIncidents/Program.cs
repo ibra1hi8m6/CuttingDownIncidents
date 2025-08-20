@@ -3,53 +3,40 @@ using ConsoleAppWETask.DataBase;
 using ConsoleAppWETask.DataBase.Functions;
 using ConsoleAppWETask.DataBase.Procedures;
 using ConsoleAppWETask.Input;
+
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace ConsoleAppWETask
 {
-public class Program
-{
-    
-    public static async Task Main(string[] args)
+    public class Program
     {
-      
-        
+
+        public static async Task Main(string[] args)
+        {
             while (true)
             {
-                Console.WriteLine("\nChoose option:");
+                Console.WriteLine("Choose option:");
                 Console.WriteLine("1 - Enter Cutting_Down_Open (sp_Create)");
                 Console.WriteLine("2 - Enter Cutting_Down_Close (sp_Close)");
-                Console.WriteLine("3 - Get Total Impacted Customers (Function)");
-                Console.WriteLine("4 - Get Parent Hierarchy (SP)");
-                Console.WriteLine("5 - Get First Level Children (SP)");
-                Console.WriteLine("6 - Build Network Element Hierarchy (SP)");
-                Console.WriteLine("0 - Exit");
-
                 string choice = Console.ReadLine();
-                if (choice == "0")
-                {
-                    Console.WriteLine("Exiting...");
-                    break;
-                }
+
+                var form = InputHelper.GetUserInput();
 
                 using (var context = new ApplicationDbContext())
                 {
                     switch (choice)
                     {
                         case "1":
-                            var formCreate = InputHelper.GetUserInput();
-                            await context.ExecuteSpCreateAsync(formCreate);
+                            await context.ExecuteSpCreateAsync(form);
                             Console.WriteLine("sp_Create executed successfully.");
                             break;
 
                         case "2":
-                            var formClose = InputHelper.GetUserInput();
-                            await context.ExecuteSpCloseAsync(formClose);
+                            await context.ExecuteSpCloseAsync(form);
                             Console.WriteLine("sp_Close executed successfully.");
                             break;
-
                         case "3":
                             Console.Write("Enter NetworkElementKey: ");
                             int key1 = int.Parse(Console.ReadLine());
@@ -78,16 +65,15 @@ public class Program
                             Console.WriteLine("BuildNetworkElementHierarchy executed successfully.");
                             break;
 
-                       
-
                         default:
                             Console.WriteLine("Invalid choice.");
                             break;
                     }
                 }
+
+                Console.ReadKey();
             }
         }
-
     }
-}
 
+}

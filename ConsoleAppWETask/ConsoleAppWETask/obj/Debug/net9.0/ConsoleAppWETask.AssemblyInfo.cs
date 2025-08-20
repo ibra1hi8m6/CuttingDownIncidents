@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleAppWETask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eccd50a363e2f6b48775a164edde5fa54354fafb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleAppWETask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleAppWETask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
