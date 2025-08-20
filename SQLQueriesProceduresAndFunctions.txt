@@ -1,0 +1,354 @@
+CREATE PROCEDURE dbo.sp_Create
+    
+    @SourceType VARCHAR(1),
+    @Cutting_Down_Cabin_Name NVARCHAR(255) = NULL,
+    @Cutting_Down_Cable_Name NVARCHAR(255) = NULL,
+    @Problem_Type_Key INT,
+    @CreateDate DATETIME,
+    @EndDate DATETIME = NULL,
+    @IsPlanned BIT,
+    @IsGlobal BIT,
+    @PlannedStartDTS DATETIME = NULL,
+    @PlannedEndDTS DATETIME = NULL,
+    @IsActive BIT,
+    @CreatedUser NVARCHAR(255) = NULL,
+    @UpdatedUser NVARCHAR(255) = NULL,
+    @Network_Element_Key INT = NULL,
+    @ImpactedCustomers INT = 0
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    
+    DECLARE @Channel_Key INT;
+    DECLARE @CreateSystemUserID NVARCHAR(255);
+
+    
+    IF @SourceType = 'A'
+    BEGIN
+        SET @Channel_Key = 1;
+        SET @CreateSystemUserID = 'Source A user';
+    END
+    ELSE IF @SourceType = 'B'
+    BEGIN
+        SET @Channel_Key = 2;
+        SET @CreateSystemUserID = 'Source B user';
+    END
+    ELSE
+    BEGIN
+       
+        RAISERROR('Invalid SourceType. Must be ''A'' or ''B''.', 16, 1);
+        RETURN;
+    END
+
+   
+    IF @Network_Element_Key IS NULL
+    BEGIN
+        
+        INSERT INTO Cutting_Down_Ignored (
+            
+            ActualEndDate,
+            SynchCreateDate,
+            Cable_Name,
+            Cabin_Name,
+            CreatedUser
+        )
+        VALUES (
+            
+            @EndDate,
+            GETDATE(), 
+            @Cutting_Down_Cable_Name,
+            @Cutting_Down_Cabin_Name,
+            @CreatedUser
+        );
+    END
+    ELSE
+    BEGIN
+       
+        INSERT INTO Cutting_Down_Header (
+            
+            Channel_Key,
+            Cutting_Down_Problem_Type_Key,
+            ActualCreatetDate,
+            SynchCreateDate,
+            ActualEndDate,
+            IsGlobal,
+            PlannedStartDTS,
+            PlannedEndDTS,
+            IsActive,
+            CreatedUser
+        )
+        VALUES (
+            
+            @Channel_Key,
+            @Problem_Type_Key,
+            @CreateDate,
+            GETDATE(), 
+            @EndDate,
+            @IsGlobal,
+            @PlannedStartDTS,
+            @PlannedEndDTS,
+            @IsActive,
+            @CreateSystemUserID 
+        );
+
+      
+
+        
+        INSERT INTO Cutting_Down_Detail (
+            
+            Network_Element_Key,
+            ActualCreatetDate,
+            ActualEndDate,
+            ImpactedCustomers
+        )
+        VALUES (
+            
+            @Network_Element_Key,
+            @CreateDate,
+            @EndDate,
+            @ImpactedCustomers
+        );
+    END
+END;
+GO
+
+
+
+CREATE PROCEDURE dbo.sp_Close
+    
+    @SourceType VARCHAR(1),
+    @Cutting_Down_Cabin_Name NVARCHAR(255) = NULL,
+    @Cutting_Down_Cable_Name NVARCHAR(255) = NULL,
+    @Problem_Type_Key INT,
+    @CreateDate DATETIME,
+    @EndDate DATETIME = NULL,
+    @IsPlanned BIT,
+    @IsGlobal BIT,
+    @PlannedStartDTS DATETIME = NULL,
+    @PlannedEndDTS DATETIME = NULL,
+    @IsActive BIT,
+    @CreatedUser NVARCHAR(255) = NULL,
+    @UpdatedUser NVARCHAR(255) = NULL,
+    @Network_Element_Key INT = NULL,
+    @ImpactedCustomers INT = 0
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @Cutting_Down_Key INT;
+    DECLARE @Channel_Key INT;
+    DECLARE @CreateSystemUserID NVARCHAR(255);
+
+    
+    IF @SourceType = 'A'
+    BEGIN
+        SET @Channel_Key = 1;
+        SET @CreateSystemUserID = 'Source A user';
+    END
+    ELSE IF @SourceType = 'B'
+    BEGIN
+        SET @Channel_Key = 2;
+        SET @CreateSystemUserID = 'Source B user';
+    END
+    ELSE
+    BEGIN
+       
+        RAISERROR('Invalid SourceType. Must be ''A'' or ''B''.', 16, 1);
+        RETURN;
+    END
+
+   
+    IF @Network_Element_Key IS NULL
+    BEGIN
+        
+        INSERT INTO Cutting_Down_Ignored (
+            
+            ActualEndDate,
+            SynchCreateDate,
+            Cable_Name,
+            Cabin_Name,
+            CreatedUser
+        )
+        VALUES (
+            
+            @EndDate,
+            GETDATE(), 
+            @Cutting_Down_Cable_Name,
+            @Cutting_Down_Cabin_Name,
+            @CreatedUser
+        );
+    END
+    ELSE
+    BEGIN
+        
+        INSERT INTO Cutting_Down_Header (
+            
+            Channel_Key,
+            Cutting_Down_Problem_Type_Key,
+            ActualCreatetDate,
+            SynchCreateDate,
+            ActualEndDate,
+            IsGlobal,
+            PlannedStartDTS,
+            PlannedEndDTS,
+            IsActive,
+            CreatedUser
+        )
+        VALUES (
+            
+            @Channel_Key,
+            @Problem_Type_Key,
+            @CreateDate,
+            GETDATE(), 
+            @EndDate,
+            @IsGlobal,
+            @PlannedStartDTS,
+            @PlannedEndDTS,
+            0, 
+            @CreateSystemUserID
+        );
+
+        
+
+       
+        INSERT INTO Cutting_Down_Detail (
+            
+            Network_Element_Key,
+            ActualCreatetDate,
+            ActualEndDate,
+            ImpactedCustomers
+        )
+        VALUES (
+            
+            @Network_Element_Key,
+            @CreateDate,
+            @EndDate,
+            @ImpactedCustomers
+        );
+    END
+END;
+GO
+
+
+CREATE PROCEDURE BuildNetworkElementHierarchy
+AS
+BEGIN
+    ;WITH Hierarchy AS
+    (
+        SELECT 
+            ne.Network_Element_Key,
+            ne.Network_Element_Name,
+            net.Network_Element_Type_Name,
+            CAST(ne.Network_Element_Name AS VARCHAR(MAX)) AS FullPath,
+            ne.Parent_Network_Element_Key
+        FROM Network_Element ne
+        JOIN Network_Element_Type net 
+            ON ne.Network_Element_Type_Key = net.Network_Element_Type_key
+        WHERE ne.Parent_Network_Element_Key IS NULL
+
+        UNION ALL
+
+        SELECT 
+            c.Network_Element_Key,
+            c.Network_Element_Name,
+            net.Network_Element_Type_Name,
+            CAST(p.FullPath + ' -> ' + c.Network_Element_Name AS VARCHAR(MAX)),
+            c.Parent_Network_Element_Key
+        FROM Network_Element c
+        JOIN Network_Element_Type net 
+            ON c.Network_Element_Type_Key = net.Network_Element_Type_key
+        INNER JOIN Hierarchy p
+            ON c.Parent_Network_Element_Key = p.Network_Element_Key
+    )
+    SELECT * FROM Hierarchy;
+END;
+
+
+CREATE PROCEDURE GetFirstLevelChildren
+    @ParentElementKey INT
+AS
+BEGIN
+    SELECT 
+        ne.Network_Element_Key,
+        ne.Network_Element_Name,
+        net.Network_Element_Type_Name
+    FROM Network_Element ne
+    JOIN Network_Element_Type net 
+        ON ne.Network_Element_Type_Key = net.Network_Element_Type_key
+    WHERE ne.Parent_Network_Element_Key = @ParentElementKey;
+END;
+
+
+
+
+CREATE PROCEDURE GetParentHierarchy
+    @ElementKey INT
+AS
+BEGIN
+    ;WITH ParentHierarchy AS
+    (
+        SELECT 
+            ne.Network_Element_Key,
+            ne.Network_Element_Name,
+            net.Network_Element_Type_Name,
+            ne.Parent_Network_Element_Key
+        FROM Network_Element ne
+        JOIN Network_Element_Type net 
+            ON ne.Network_Element_Type_Key = net.Network_Element_Type_key
+        WHERE ne.Network_Element_Key = @ElementKey
+
+        UNION ALL
+
+        SELECT 
+            p.Network_Element_Key,
+            p.Network_Element_Name,
+            net.Network_Element_Type_Name,
+            p.Parent_Network_Element_Key
+        FROM Network_Element p
+        JOIN Network_Element_Type net 
+            ON p.Network_Element_Type_Key = net.Network_Element_Type_key
+        INNER JOIN ParentHierarchy ch
+            ON ch.Parent_Network_Element_Key = p.Network_Element_Key
+    )
+    SELECT * FROM ParentHierarchy;
+END;
+
+
+
+
+CREATE FUNCTION dbo.GetTotalImpactedCustomers (@ElementKey INT)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Total INT;
+
+    ;WITH RecursiveCTE AS
+    (
+        SELECT ne.Network_Element_Key
+        FROM Network_Element ne
+        WHERE ne.Network_Element_Key = @ElementKey
+
+        UNION ALL
+
+        SELECT c.Network_Element_Key
+        FROM Network_Element c
+        INNER JOIN RecursiveCTE p
+            ON c.Parent_Network_Element_Key = p.Network_Element_Key
+    )
+    SELECT @Total = SUM(ISNULL(cd.ImpactedCustomers,0))
+    FROM RecursiveCTE r
+    LEFT JOIN Cutting_Down_Detail cd
+        ON r.Network_Element_Key = cd.Network_Element_Key;
+
+    RETURN ISNULL(@Total,0);
+END;
+
+
+
+SELECT dbo.GetTotalImpactedCustomers(3); -- Example for Zone 1
+
+
+
+
+
