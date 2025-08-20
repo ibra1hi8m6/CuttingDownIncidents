@@ -1,0 +1,34 @@
+
+<app-header></app-header>
+<nav class="navbar">
+  <!-- Search -->
+  <a
+    routerLink="search"
+    routerLinkActive="active"
+    class="nav-item"
+  >
+    <i class="fa fa-search"></i>
+    <span>Search</span>
+  </a>
+
+  <!-- Ignored Outages -->
+  <a
+    routerLink="ignored"
+    routerLinkActive="active"
+    class="nav-item"
+  >
+    <i class="fa fa-ban"></i>
+    <span>Ignored Outages</span>
+  </a>
+
+  <!-- Add -->
+  <a
+    routerLink="add"
+    routerLinkActive="active"
+    class="nav-item"
+  >
+    <i class="fa fa-plus"></i>
+    <span>Add</span>
+  </a>
+</nav>
+<router-outlet></router-outlet>

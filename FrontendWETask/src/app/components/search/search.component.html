@@ -1,0 +1,183 @@
+
+<body>
+    <div class="container">
+        <!-- Advanced Search Section -->
+        <div class="search-section">
+            <h2 class="search-title">Advanced Search</h2>
+
+
+           <div class="search-grid">
+                <div class="form-group">
+    <label class="form-label">Source of Cutting down</label>
+    <select class="form-select">
+      <option value="">Please Select</option>
+      <option *ngFor="let ch of channels" [value]="ch.channel_Key">
+        {{ ch.channel_Name }}
+      </option>
+    </select>
+  </div>
+
+
+                       <div class="form-group">
+    <label class="form-label">Problem type of cutting down</label>
+    <select class="form-select">
+      <option value="">Please Select</option>
+      <option *ngFor="let pt of problemTypes" [value]="pt.problem_Type_Key">
+        {{ pt.problem_Type_Name }}
+      </option>
+    </select>
+  </div>
+
+
+            <div class="search-row">
+                <div class="form-group">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option>Please Select</option>
+                        <option>Closed</option>
+                        <option>Open</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Search Value</label>
+                    <input type="text" class="form-input" placeholder="Search Value">
+                </div>
+            </div>
+
+                  <div class="form-group">
+    <label class="form-label">Search Criteria</label>
+    <select class="form-select">
+      <option value="">Please Select</option>
+      <option *ngFor="let ne of networkElementTypes" [value]="ne.network_Element_Type_Key">
+        {{ ne.network_Element_Type_Name }}
+      </option>
+    </select>
+  </div>
+                <div></div>
+            </div>
+
+            <div class="search-actions">
+                <button class="btn btn-primary">🔍 Search</button>
+            </div>
+        </div>
+
+        <!-- Export Section -->
+        <div class="export-section">
+            <button class="btn btn-outline">📊 Export to Excel</button>
+            <button class="btn btn-outline">📄 Export to PDF</button>
+        </div>
+
+        <!-- Table Info -->
+        <div class="table-info">
+            Drag a column header and drop it here to group by that column
+        </div>
+
+        <!-- Data Table -->
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>☐</th>
+                        <th>Actions</th>
+                        <th>Cutting_Down_Key</th>
+                        <th>Cutting_Down_Incident_ID</th>
+                        <th>Channel_Key</th>
+                        <th>IsPlanned</th>
+                        <th>IsGlobal</th>
+                        <th>PlannedStartDTS</th>
+                        <th>PlannedEndDTS</th>
+                        <th>IsActive</th>
+                        <th>CreateSystemUser</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>☐</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-sm btn-view">View</button>
+                                <button class="btn btn-sm btn-close">Close</button>
+                                <button class="btn btn-sm btn-close-all">Close All</button>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-sm btn-view">View</button>
+                                <button class="btn btn-sm btn-close">Close</button>
+                                <button class="btn btn-sm btn-close-all">Close All</button>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>☐</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-sm btn-view">View</button>
+                                <button class="btn btn-sm btn-close">Close</button>
+                                <button class="btn btn-sm btn-close-all">Close All</button>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <div class="pagination-info">
+                <button class="btn btn-outline">‹</button>
+                <span class="btn btn-primary">1</span>
+                <button class="btn btn-outline">›</button>
+                <select class="page-select">
+                    <option>20</option>
+                    <option>50</option>
+                    <option>100</option>
+                </select>
+                <span>items per page</span>
+            </div>
+
+            <div class="search-input-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="total-count">
+                Total: <span class="total-count">205</span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+

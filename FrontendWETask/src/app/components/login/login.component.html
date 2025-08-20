@@ -1,0 +1,53 @@
+<p>login works!</p>
+<div class="login-container">
+<app-header></app-header>
+  <h2>Login</h2>
+
+<p> Please sign-in to your account</p>
+ <form (ngSubmit)="onLogin()" class="space-y-4">
+ <div class="form-group">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+       name="name"
+      [(ngModel)]="loginData.name"
+      placeholder="Enter username"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+       name="password"
+      [(ngModel)]="loginData.password"
+
+      placeholder="Enter password"
+    />
+  </div>
+
+<div class="form-remember">
+    <input type="checkbox" id="rememberMe" />
+    <label for="rememberMe">Remember Me</label>
+  </div>
+
+  <button
+  class ="signin-btn"
+      type="submit"
+      [disabled]="loading"
+      class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+    >
+      {{ loading ? 'Logging in...' : 'Login' }}
+    </button>
+
+    <div *ngIf="message" class="mt-4 text-center font-medium">
+    {{ message }}
+  </div>
+</form>
+    <div class="skip-link">
+    <a (click)="skip()">Skip for now</a>
+  </div>
+
+</div>
+<!-- [(ngModel)]="rememberMe" [(ngModel)]="password" [(ngModel)]="username" -->

@@ -1,0 +1,376 @@
+/* Cutting Portal Page 1 - Table View Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+.cutting-portal-page1 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 32px;
+  border-radius: 25px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+/* Top Navigation */
+.top-nav {
+  padding: 0 40px 20px 40px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.nav-btn.active {
+  background: #8b5cf6;
+  color: white;
+  border-color: #8b5cf6;
+}
+
+.nav-btn .icon {
+  font-size: 16px;
+}
+
+/* Controls Section */
+.controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 20px 40px;
+}
+
+.export-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.export-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.export-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.table-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 40px 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 250px;
+  background: white;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.search-icon-btn {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Drag Instruction */
+.drag-instruction {
+  margin: 0 40px 16px 40px;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border: 1px dashed #dee2e6;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Table Container */
+.table-container {
+  margin: 0 40px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.data-table th {
+  background: #f8f9fa;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  white-space: nowrap;
+  position: relative;
+}
+
+.data-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.data-table th.sortable:hover {
+  background: #e9ecef;
+}
+
+.sort-icon {
+  margin-left: 8px;
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.data-table th.checkbox-col,
+.data-table td:first-child {
+  width: 40px;
+  text-align: center;
+}
+
+.data-table th.action-col {
+  width: 120px;
+}
+
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f3f4;
+  border-right: 1px solid #f1f3f4;
+  vertical-align: middle;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn {
+  background: #8b5cf6;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #7c3aed;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #f8f9fa;
+  margin: 0 40px;
+  border-top: 1px solid #dee2e6;
+}
+
+.pagination-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-nav-btn,
+.page-number {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dee2e6;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.page-nav-btn:hover:not(:disabled),
+.page-number:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.page-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f8f9fa;
+}
+
+.page-number.active {
+  background: #ff6b35;
+  color: white;
+  border-color: #ff6b35;
+}
+
+.page-info {
+  margin: 0 8px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.pagination-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.items-per-page {
+  padding: 4px 8px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+}
+
+.items-text {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.pagination-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.total-text {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.refresh-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dee2e6;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.refresh-btn:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls-section {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .pagination-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .top-nav {
+    padding: 0 20px 20px 20px;
+  }
+
+  .controls-section,
+  .pagination-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .table-container,
+  .drag-instruction {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

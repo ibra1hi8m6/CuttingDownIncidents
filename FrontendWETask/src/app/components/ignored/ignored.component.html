@@ -1,0 +1,128 @@
+<div class="cutting-portal-page1">
+  <!-- Header -->
+
+  <!-- Export and Search Section -->
+  <div class="controls-section">
+    <div class="export-controls">
+      <button class="export-btn">
+        <i class="icon">📊</i>
+        Export to Excel
+      </button>
+      <button class="export-btn">
+        <i class="icon">📄</i>
+        Export to PDF
+      </button>
+    </div>
+
+    <div class="table-search">
+      <input type="text" placeholder="Search..." class="search-input">
+      <button class="search-icon-btn">🔍</button>
+    </div>
+  </div>
+
+  <!-- Drag Instruction -->
+  <div class="drag-instruction">
+    Drag a column header and drop it here to group by that column
+  </div>
+
+  <!-- Data Table -->
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th class="checkbox-col">
+            <input type="checkbox" class="select-all">
+          </th>
+          <th class="action-col">Action</th>
+          <th class="sortable">
+            Cutting_Down_Incident_ID
+            <span class="sort-icon">⚏</span>
+          </th>
+          <th class="sortable">
+            ActualCreateDate
+            <span class="sort-icon">⚏</span>
+          </th>
+          <th class="sortable">
+            SynchCreateDate
+            <span class="sort-icon">⚏</span>
+          </th>
+          <th class="sortable">
+            Cabel_Name
+            <span class="sort-icon">⚏</span>
+          </th>
+          <th class="sortable">
+            Cabin_Name
+            <span class="sort-icon">⚏</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+          <td>123</td>
+          <td>01/01/2020</td>
+          <td>30/06/2021</td>
+          <td>147</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+          <td>321</td>
+          <td>01/01/2020</td>
+          <td>30/06/2021</td>
+          <td></td>
+          <td>963</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <button class="action-btn delete-btn">Delete</button>
+          </td>
+          <td>123</td>
+          <td>01/01/2020</td>
+          <td>30/06/2021</td>
+          <td>147</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination-container">
+    <div class="pagination-left">
+      <button class="page-nav-btn" disabled>‹‹</button>
+      <button class="page-nav-btn" disabled>‹</button>
+      <span class="page-info">1</span>
+      <button class="page-number active">1</button>
+      <button class="page-nav-btn">›</button>
+      <button class="page-nav-btn">››</button>
+    </div>
+
+    <div class="pagination-center">
+      <select class="items-per-page">
+        <option value="20" selected>20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      <span class="items-text">items per page</span>
+    </div>
+
+    <div class="pagination-right">
+      <span class="total-text">Total:</span>
+      <button class="refresh-btn">🔄</button>
+    </div>
+  </div>
+</div>
