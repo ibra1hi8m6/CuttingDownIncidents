@@ -7,41 +7,41 @@
 
 
            <div class="search-grid">
-                <div class="form-group">
+                 <div class="form-group">
     <label class="form-label">Source of Cutting down</label>
-    <select class="form-select">
-      <option value="">Please Select</option>
-      <option *ngFor="let ch of channels" [value]="ch.channel_Key">
+    <select class="form-select" [(ngModel)]="filter.ChannelKey" name="channelKey">
+      <option [ngValue]="null">Please Select</option>
+      <option *ngFor="let ch of channels" [ngValue]="ch.Channel_Key">
         {{ ch.channel_Name }}
       </option>
     </select>
   </div>
 
 
-                       <div class="form-group">
+
+                         <div class="form-group">
     <label class="form-label">Problem type of cutting down</label>
-    <select class="form-select">
-      <option value="">Please Select</option>
-      <option *ngFor="let pt of problemTypes" [value]="pt.problem_Type_Key">
+    <select class="form-select" [(ngModel)]="filter.ProblemTypeKey" name="problemTypeKey">
+      <option [ngValue]="null">Please Select</option>
+      <option *ngFor="let pt of problemTypes" [ngValue]="pt.problem_Type_Key">
         {{ pt.problem_Type_Name }}
       </option>
     </select>
   </div>
 
 
-            <div class="search-row">
-                <div class="form-group">
-                    <label class="form-label">Status</label>
-                    <select class="form-select">
-                        <option>Please Select</option>
-                        <option>Closed</option>
-                        <option>Open</option>
-                    </select>
-                </div>
+             <div class="form-group">
+    <label class="form-label">Status</label>
+    <select class="form-select" [(ngModel)]="filter.status" name="status">
+      <option value="">Please Select</option>
+      <option value="open">Open</option>
+      <option value="closed">Closed</option>
+    </select>
+  </div>
 
                 <div class="form-group">
                     <label class="form-label">Search Value</label>
-                    <input type="text" class="form-input" placeholder="Search Value">
+                    <input type="text" class="form-input"[(ngModel)]="filter.searchValue" name="searchValue" placeholder="Search Value">
                 </div>
             </div>
 
@@ -49,16 +49,16 @@
     <label class="form-label">Search Criteria</label>
     <select class="form-select">
       <option value="">Please Select</option>
-      <option *ngFor="let ne of networkElementTypes" [value]="ne.network_Element_Type_Key">
+      <option *ngFor="let ne of networkElementTypes" [value]="ne.Network_Element_Type_Key">
         {{ ne.network_Element_Type_Name }}
       </option>
     </select>
   </div>
-                <div></div>
+                <div>
             </div>
 
             <div class="search-actions">
-                <button class="btn btn-primary">🔍 Search</button>
+                <button class="btn btn-primary" (click)="onSearch()">🔍 Search</button>
             </div>
         </div>
 
@@ -82,17 +82,19 @@
                         <th>Actions</th>
                         <th>Cutting_Down_Key</th>
                         <th>Cutting_Down_Incident_ID</th>
-                        <th>Channel_Key</th>
-                        <th>IsPlanned</th>
-                        <th>IsGlobal</th>
+                        <th>Channel</th>
+                        <th>ProblemType</th>
+                        <th>Status</th>
                         <th>PlannedStartDTS</th>
                         <th>PlannedEndDTS</th>
-                        <th>IsActive</th>
-                        <th>CreateSystemUser</th>
+                        <th>CreatedUser</th>
+                        <th>NetworkElement</th>
+                        <th>ImpactedCustomers</th>
+                        <th>DetailCreatedDate</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr  *ngFor="let h of searchResult.headers">
                         <td>☐</td>
                         <td>
                             <div class="action-buttons">
@@ -101,54 +103,39 @@
                                 <button class="btn btn-sm btn-close-all">Close All</button>
                             </div>
                         </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ h.cutting_Down_Key }}</td>
+                    <td>{{ h.cutting_Down_Incident_ID }}</td>
+                    <td>{{ h.channel_Key }}</td>
+                    <td>{{  h.problem_Type_Key }}</td>
+                    <td>{{ h.isActive ? 'Open' : 'Closed' }}</td>
+                    <td>{{ h.plannedStartDTS | date }}</td>
+                    <td>{{ h.plannedEndDTS | date }}</td>
+                    <td>{{ h.createdUser }}</td>
+                    <!-- Match header with detail -->
+                    <td>
+                      <ul>
+                        <li *ngFor="let d of getDetailsForHeader(h.Cutting_Down_Key)">
+                          {{ d.Network_Element_Key }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li *ngFor="let d of getDetailsForHeader(h.Cutting_Down_Key)">
+                          {{ d.ImpactedCustomers }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                      <li *ngFor="let d of getDetailsForHeader(h.Cutting_Down_Key)">
+                        {{ d.ActualCreatetDate | date }}
+                      </li>
+
+                      </ul>
+                    </td>
                     </tr>
-                    <tr>
-                        <td>☐</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn btn-sm btn-view">View</button>
-                                <button class="btn btn-sm btn-close">Close</button>
-                                <button class="btn btn-sm btn-close-all">Close All</button>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>☐</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn btn-sm btn-view">View</button>
-                                <button class="btn btn-sm btn-close">Close</button>
-                                <button class="btn btn-sm btn-close-all">Close All</button>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>

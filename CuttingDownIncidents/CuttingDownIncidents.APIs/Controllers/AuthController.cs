@@ -27,7 +27,9 @@ namespace CuttingDownIncidents.APIs.Controllers
             if (!result.Success)
                 return Unauthorized(new { message = result.Message });
 
-            return Ok(new { message = result.Message });
+            return Ok(new { message = result.Message,
+                userKey = result.UserKey
+            });
         }
     }
 }

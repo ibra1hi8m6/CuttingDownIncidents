@@ -19,6 +19,6 @@ namespace CuttingDownIncidents.Data
         Task SaveAsync();
         Task<IEnumerable<T>> GetByCategoryIdAsync(int categoryId);
         Task SoftDeleteAsync(int id);
-        
+        IQueryable<T> GetQueryable();
     }
 }

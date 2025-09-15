@@ -34,6 +34,9 @@ export class AddComponent implements OnInit  {
   selectedTower?: number;
   selectedCabin?: number;
   selectedHierarchyPath?: string;
+    selectedProblemType?: number;
+  selectedDate?: string;
+  impactedCustomers?: number;
   constructor(private hierarchyService: HierarchyService,
               private apiService: ApiService) {}
 
@@ -124,5 +127,62 @@ export class AddComponent implements OnInit  {
     if (cabinKey) {
       this.hierarchyService.getCables(cabinKey).subscribe(data => this.cables = data);
     }
+  }
+
+   addIncident() {
+    if (!this.selectedProblemType || !this.selectedDate || !this.impactedCustomers) {
+      alert("Please fill all required fields");
+      return;
+    }
+
+    // Take selected network element (last selected node)
+    const networkElementKey = this.selectedCabin
+      || this.selectedTower
+      || this.selectedStation
+      || this.selectedCity
+      || this.selectedZone
+      || this.selectedSector
+      || this.selectedGovernrate;
+
+    if (!networkElementKey) {
+      alert("Please select a network element from hierarchy");
+      return;
+    }
+
+    // Get user from local storage
+    const createdUser = localStorage.getItem("userKey") || "unknown";
+
+    const dto = {
+      cutting_Down_Problem_Type_Key: this.selectedProblemType,
+      actualCreatetDate: this.selectedDate,
+      network_Element_Key: networkElementKey,
+      impactedCustomers: this.impactedCustomers,
+      createdUser: createdUser
+    };
+
+    this.apiService.createIncident(dto).subscribe({
+      next: (res) => {
+        console.log("Incident created:", res);
+        alert("Incident created successfully!");
+        this.resetForm();
+      },
+      error: (err) => {
+        console.error("Error creating incident", err);
+        alert("Failed to create incident");
+      }
+    });
+  }
+
+  resetForm() {
+    this.selectedProblemType = undefined;
+    this.selectedDate = undefined;
+    this.impactedCustomers = undefined;
+    this.selectedGovernrate = undefined;
+    this.selectedSector = undefined;
+    this.selectedZone = undefined;
+    this.selectedCity = undefined;
+    this.selectedStation = undefined;
+    this.selectedTower = undefined;
+    this.selectedCabin = undefined;
   }
 }

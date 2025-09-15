@@ -93,7 +93,10 @@ namespace CuttingDownIncidents.Data
             await _context.SaveChangesAsync();
         }
 
-        // New method: Update and Copy
-       
+        public IQueryable<T> GetQueryable()
+        {
+            return _dbSet;
+        }
+
     }
 }

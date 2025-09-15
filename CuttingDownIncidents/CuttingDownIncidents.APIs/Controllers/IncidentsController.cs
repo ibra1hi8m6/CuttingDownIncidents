@@ -1,5 +1,6 @@
 ﻿using CuttingDownIncidents.Infrastructure.ViewModel;
 using CuttingDownIncidents.Service.Implementation.IServices;
+using CuttingDownIncidents.Service.Implementation.Servies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
@@ -14,10 +15,11 @@ namespace CuttingDownIncidents.APIs.Controllers
          [EnableRateLimiting("BandwidthLimit")]*/
 
         private readonly IGetDataService _getDataService;
-
-        public IncidentsController(IGetDataService getDataService)
+        private readonly ICuttingDownService _cuttingDownService;
+        public IncidentsController(IGetDataService getDataService, ICuttingDownService cuttingDownService)
         {
             _getDataService = getDataService;
+            _cuttingDownService = cuttingDownService;
         }
 
         [HttpGet("GetProblemTypes")]
@@ -53,6 +55,36 @@ namespace CuttingDownIncidents.APIs.Controllers
             return Ok(result);
         }
 
+        [HttpPost("search")]
+        public async Task<IActionResult> SearchIncidents([FromBody] CuttingDownSearchFilter filter)
+        {
+            try
+            {
+                var result = await _cuttingDownService.SearchIncidentsAsync(filter);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpPost("create")]
+        public async Task<IActionResult> CreateIncident([FromBody] CreateCuttingDownIncidentDTO dto)
+        {
+            if (dto == null)
+                return BadRequest("Invalid input.");
+
+            try
+            {
+                var id = await _cuttingDownService.CreateIncidentAsync(dto);
+                return Ok(new { Cutting_Down_Key = id });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
 
     }
 }

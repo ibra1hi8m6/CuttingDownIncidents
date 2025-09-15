@@ -18,6 +18,7 @@ namespace CuttingDownIncidents.Infrastructure.ViewModel
         {
             public bool Success { get; set; }
             public string Message { get; set; }
+            public int UserKey { get; set; }
         }
     }
 }

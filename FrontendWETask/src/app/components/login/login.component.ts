@@ -27,24 +27,24 @@ export class LoginComponent {
 
   constructor(private router: Router,private authService: AuthService) {}
   onLogin() {
-    this.authService.login(this.loginData).subscribe({
-      next: (response) => {
-        console.log("Login successful", response);
+  this.authService.login(this.loginData).subscribe({
+    next: (response) => {
+      console.log("Login successful", response);
 
-        // ✅ Save token (if exists)
-        if (response.token) {
-          localStorage.setItem("authToken", response.token);
-        }
-
-        // ✅ Redirect to "shared/search" after login
-        this.router.navigate(['/shared']);
-      },
-      error: (err) => {
-        console.error("Login failed", err);
-        alert("Invalid credentials");
+      // ✅ Save UserKey in local storage
+      if (response.userKey) {
+        localStorage.setItem("userKey", response.userKey);
       }
-    });
-  }
+
+      // ✅ Redirect to /shared/add after login
+      this.router.navigate(['/shared']);
+    },
+    error: (err) => {
+      console.error("Login failed", err);
+      alert("Invalid credentials");
+    }
+  });
+}
   skip() {
     this.router.navigate(['/shared']); // redirect to SharedComponent
   }

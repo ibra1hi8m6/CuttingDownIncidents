@@ -25,4 +25,11 @@ private baseUrl = `${environment.apiurl}/incidents`;
   return this.http.get<any[]>(`${this.baseUrl}/NetworkElementHierarchyPath`);
 }
 
+searchIncidents(filter: any): Observable<any> {
+  return this.http.post<any>(`${this.baseUrl}/search`, filter);
+}
+createIncident(data: any) {
+  return this.http.post(`${this.baseUrl}/create`, data);
+}
+
 }
